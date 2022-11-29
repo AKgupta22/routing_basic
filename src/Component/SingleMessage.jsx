@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import JsonData from "../JsonData";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 export default function SingleMessage() {
   const [data, setData] = useState({});
   const { q } = useParams();
@@ -19,6 +19,7 @@ export default function SingleMessage() {
             })
           }
         </ul>
+        <Link to='/message' class="btn btn-secondary mt-2">Back</Link>
       </div>
     </div>
   );
